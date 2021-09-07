@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,12 +19,9 @@ class MainActivity : AppCompatActivity() {
         mConvertBTN.setOnClickListener {
 
             val valueToConvert: Double = mEditAmountInNaira.getText().toString().toDouble()
-            val result : Double = valueToConvert * btcValue
-            val decimalPlace = String.format ("%.2f", result)
-            mConvertedAmount.text = decimalPlace.toString()
-
-
-
+            val result: Double = valueToConvert * btcValue
+            val decimalPlace = String.format("%.2f", result)
+            mConvertedAmount.text = decimalPlace
         }
     }
 }
