@@ -19,7 +19,8 @@ class MainActivity : AppCompatActivity() {
 
             val valueToConvert: Double = mEditAmountInNaira.getText().toString().toDouble()
             val result : Double = valueToConvert * btcValue
-            mConvertedAmount.text = result.toString()
+            val decimalPlace = String.format ("%.2f", result)
+            mConvertedAmount.text = decimalPlace.toString()
 
 
 
