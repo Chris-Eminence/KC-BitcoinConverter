@@ -27,6 +27,7 @@
         android:id="@+id/convert_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
         android:layout_marginHorizontal="70dp"
         android:text="Convert"/>
 
@@ -38,5 +39,15 @@
         android:textColor="@color/black"
         android:layout_gravity="center"
         android:text="Price of BTC in Naira will appear here"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Round Up"/>
 
 </LinearLayout>
