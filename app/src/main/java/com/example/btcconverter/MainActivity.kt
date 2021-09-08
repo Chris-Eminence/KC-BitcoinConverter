@@ -33,9 +33,7 @@ class MainActivity : AppCompatActivity() {
         var result = convertAmount * btcValue
         var roundUp = binding.switchUp.isChecked
         if (roundUp){
-//            result.toString().toInt()
-            val result = String.format("%.1f", result)
-//            result = kotlin.math.ceil(result)
+           result = kotlin.math.round(result)
         }
         var formattedResult = NumberFormat.getCurrencyInstance().format(result)
         binding.conertedAmount.text = formattedResult
