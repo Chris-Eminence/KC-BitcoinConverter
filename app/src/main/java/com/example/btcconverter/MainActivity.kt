@@ -11,7 +11,9 @@ import com.example.btcconverter.databinding.ActivityMainBinding
 import java.text.NumberFormat
 
 class MainActivity : AppCompatActivity() {
+
     lateinit var binding : ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -33,7 +35,8 @@ class MainActivity : AppCompatActivity() {
         var result = convertAmount * btcValue
         var roundUp = binding.switchUp.isChecked
         if (roundUp){
-           result = kotlin.math.round(result)
+            Math.round(result)
+            binding.conertedAmount.text = result.toString()
         }
         var formattedResult = NumberFormat.getCurrencyInstance().format(result)
         binding.conertedAmount.text = formattedResult
